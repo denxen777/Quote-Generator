@@ -1,7 +1,7 @@
-'use strict';
+import "./style.css";
 
-const divQuote = document.querySelector('.quote');
-const buttonGenerate = document.querySelector('.buttons .btnGenerate');
+const divQuote = document.querySelector('.wrapper_quote');
+const buttonGenerate = document.querySelector('.wrapper_buttons_btnGenerate');
 
 const quotesAuthors = ['"The Pessimist Sees Difficulty In Every Opportunity. The Optimist Sees Opportunity In Every Difficulty." - Winston Churchill',
   '"The only person you are destined to become is the person you decide to be." - Ralph Waldo Emerson',
@@ -51,10 +51,10 @@ function generateQuote(arr) {
 function smashQuotes(array) {
   const obj = {};
 
-  for (let i = 0; i < array.length; i++) {
-    const author = array[i].replace(/^".+"/g, '').replace(/^\s/,'');
-    obj[author] = array[i].replace(author, '').replace(/\s$/, '');
-  }
+  array.forEach(v => {
+    const author = v.replace(/^".+"/g, '').replace(/^\s/,'');
+    obj[author] = v.replace(author, '').replace(/\s$/, '');
+  })
 
   return Object.entries(obj);
 }

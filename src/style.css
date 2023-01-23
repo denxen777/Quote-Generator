@@ -17,7 +17,7 @@ body {
   font-family: Verdana, sans-serif;
 }
 
-.quote {
+.wrapper_quote {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,7 +32,7 @@ body {
   line-height: 40px;
 }
 
-.buttons .btnGenerate {
+.wrapper_buttons_btnGenerate {
   margin-top: 20px;
   outline: none;
   color: #fff;
@@ -46,12 +46,12 @@ body {
                 border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
-.buttons .btnGenerate:hover {
+.wrapper_buttons_btnGenerate:hover {
   border-color: #117A8B;
   background: #138496;
 }
 
-.buttons .btnGenerate:focus {
+.wrapper_buttons_btnGenerate:focus {
   border-color: #117A8B;
   background: #138496;
   box-shadow: 0 0 0 0.2rem rgb(58 176 195 / 50%);
